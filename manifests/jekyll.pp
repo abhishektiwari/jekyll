@@ -14,7 +14,7 @@ class jekyll::jekyll {
 		ensure => present,
 	}
 	package {'jekyll':
-		ensure     => latest,
+		ensure     => '1.2.1',
 		provider   => 'gem',
 		require    => Package['rubygems', 'ruby1.8-dev', 'ruby1.9.1-dev', 'build-essential'],
 	}
